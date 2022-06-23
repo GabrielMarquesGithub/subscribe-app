@@ -1,0 +1,34 @@
+.sign-in-button {
+  height: 3rem;
+  //border-radius do mesmo tamanho do height vai arredondar o max possível
+  border-radius: 3rem;
+  background: var(--grey-850);
+
+  border: 0;
+  padding: 0 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--white);
+  font-weight: bold;
+
+  transition: filter 0.2s;
+
+  svg {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  svg:first-child {
+    margin-right: 1rem;
+  }
+  svg:last-child {
+    margin-left: 1rem;
+  }
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+}

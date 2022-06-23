@@ -1,0 +1,180 @@
+.header-container {
+  height: 5rem;
+  border-bottom: 1px solid var(--grey-800);
+}
+.header-content {
+  height: 5rem;
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: 0 2rem;
+
+  display: flex;
+  align-items: center;
+
+  .headerInteractions {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    button {
+      margin-left: auto;
+      margin-right: 3rem;
+    }
+  }
+
+  .imgContainer {
+    display: block;
+    width: 10rem;
+    min-width: 200px;
+  }
+  .menuIconContainer {
+    display: none;
+  }
+  nav {
+    margin-left: 3rem;
+    height: 5rem;
+
+    a {
+      display: inline-block;
+      position: relative;
+
+      padding: 0 0.5rem;
+      height: 5rem;
+      line-height: 5rem;
+      color: var(--grey-300);
+
+      transition: color 0.2s;
+
+      & + a {
+        margin-left: 1.5rem;
+      }
+
+      &:hover {
+        color: var(--white);
+      }
+
+      &.active {
+        color: var(--white);
+        font-weight: bold;
+      }
+
+      &.active::after {
+        content: "";
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+
+        display: inline-block;
+        height: 0.2rem;
+        width: 100%;
+
+        border-start-end-radius: 1rem;
+        border-start-start-radius: 1rem;
+        background-color: var(--yellow-500);
+      }
+    }
+  }
+
+  @media (max-width: 720px) {
+    .headerInteractions {
+      display: none;
+    }
+
+    .menuIconContainer {
+      margin-left: auto;
+      font-size: 3rem;
+      height: 5rem;
+
+      display: flex;
+      align-items: center;
+
+      transition: transform 0.2s;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+    //caso o menu esteja aberto
+    &.open {
+      padding-right: 0;
+
+      .bgWhenOpen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .menuIconContainer {
+        display: none;
+      }
+      .headerInteractions {
+        right: 0;
+        position: absolute;
+        z-index: 2;
+
+        display: flex;
+        align-self: flex-start;
+        flex-direction: column;
+
+        padding-top: 2rem;
+        height: 20rem;
+        animation: ApearAnimationMenu 0.5s forwards;
+
+        background: rgba(0, 0, 0, 0.97);
+        border-bottom-left-radius: 3rem;
+        border-left: 3px solid var(--white);
+        border-bottom: 1px solid var(--white);
+
+        button {
+          opacity: 0;
+          margin: auto 2rem 3rem 2rem;
+          animation: ApearAnimationItem 0.3s forwards 0.3s;
+          background-color: var(--white);
+          color: black;
+        }
+      }
+      nav {
+        height: 0;
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 2rem;
+
+        a {
+          line-height: 0;
+          height: 2rem;
+          padding: 2rem;
+          margin: 0;
+          font-size: 1.5rem;
+        }
+
+        a::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@keyframes ApearAnimationMenu {
+  0% {
+    width: 10rem;
+  }
+  100% {
+    width: 20rem;
+  }
+}
+@keyframes ApearAnimationItem {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

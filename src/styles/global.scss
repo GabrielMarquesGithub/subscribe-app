@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  @media (max-width: 1080px) {
+    font-size: 93.75%;
+  }
+  @media (max-width: 720px) {
+    font-size: 87.5%;
+  }
+}
+
+:root {
+  --white: #fff;
+
+  --grey-100: #e1e1e6;
+  --grey-300: #a8a8b3;
+  --grey-800: #29292e;
+  --grey-850: #1f2729;
+  --grey-900: #121214;
+
+  --cyan-500: #61dafb;
+  --yellow-500: #eba417;
+}
+
+body {
+  background: var(--grey-900);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+//elementos que não recebem a font vinda do body
+body,
+input,
+textarea,
+select,
+button {
+  font: 400 1rem "Roboto", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+a {
+  //o inherit faz com que ele assuma as cores do elemento pai
+  color: inherit;
+  text-decoration: none;
+}
