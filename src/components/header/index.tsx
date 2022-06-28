@@ -6,6 +6,7 @@ import logo from "../../../public/images/title.svg";
 import { BiMenuAltRight } from "react-icons/bi";
 
 import styles from "./style.module.scss";
+import { ActiveLink } from "../activeLink";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -22,7 +23,7 @@ export function Header() {
         }
       >
         <span className={styles.imgContainer}>
-          <Image src={logo} alt="Best Article" layout="responsive" />
+          <Image src={logo} alt="Best Article" layout="responsive" priority />
         </span>
 
         <span className={styles.menuIconContainer}>
@@ -31,10 +32,14 @@ export function Header() {
 
         <div className={styles.headerInteractions}>
           <nav>
-            <a className={styles["active"]} href="#">
-              Home
-            </a>
-            <a href="#">Posts</a>
+            {/*next disponibiliza links que substituem as ancoras*/}
+            <ActiveLink activeClass={styles.active} href="/">
+              <a>Home</a>
+            </ActiveLink>
+            {/*é possível usar o prefetch para deixar uma pagina pre carregada*/}
+            <ActiveLink activeClass={styles.active} href="/posts">
+              <a>Posts</a>
+            </ActiveLink>
           </nav>
           <SignInButton />
           <span className={styles.bgWhenOpen} onClick={handleOpen}></span>
