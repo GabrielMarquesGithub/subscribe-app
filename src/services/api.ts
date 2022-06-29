@@ -5,5 +5,5 @@ export const api = axios.create({
 });
 
 export const apiStrapi = axios.create({
-  baseURL: "http://localhost:1337/api",
+  baseURL: process.env.STRAPI_API_URL,
 });
