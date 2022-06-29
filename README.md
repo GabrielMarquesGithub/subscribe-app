@@ -16,9 +16,9 @@ Para a criação de funcionalidades do projeto foram utilizadas ferramentas disp
 ![imagem da pagina de posts](https://github.com/NikisGabriel/Subscribe-App/blob/main/public/2.png)
 #### Paginas responsivas
 
-<img src="https://github.com/NikisGabriel/Subscribe-App/blob/main/public/1%20res.png" width="33%"></img>
-<img src="https://github.com/NikisGabriel/Subscribe-App/blob/main/public/2%20res.png" width="33%"></img>
-<img src="https://github.com/NikisGabriel/Subscribe-App/blob/main/public/3%20res.png" width="33%"></img>
+<img src="https://github.com/NikisGabriel/Subscribe-App/blob/main/public/1%20res.png" width="30%"></img>
+<img src="https://github.com/NikisGabriel/Subscribe-App/blob/main/public/2%20res.png" width="30%"></img>
+<img src="https://github.com/NikisGabriel/Subscribe-App/blob/main/public/3%20res.png" width="30%"></img>
 
 #### Pagina de um post
 ![imagem de uma pagina de post](https://github.com/NikisGabriel/Subscribe-App/blob/main/public/3.png)
