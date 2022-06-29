@@ -57,7 +57,7 @@ export const getStaticPaths: GetStaticPaths = () => {
   return {
     //o path recebe o array da paginas que devem se carregadas junto ao identificador da pagina como slug ou id
     //se for passado um array vazia todas as paginas serão carregadas
-    paths: [{ params: { id: "1" } }],
+    paths: [],
     //o fallback apresenta opções para o load das demais paginas
     //fallback true fará o load das outras paginas ainda não carregadas pelo lado do cliente
     //fallback false é para quando já foram carregadas todas as paginas, e se o cliente tentar acessar outra não carregada recebera um erro 404 bad request
