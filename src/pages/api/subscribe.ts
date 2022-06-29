@@ -57,8 +57,9 @@ const subscribe = async (req: NextApiRequest, res: NextApiResponse) => {
       line_items: [{ price: "price_1LDpsEHRduut5G5eX8utq4va", quantity: 1 }],
       mode: "subscription",
       allow_promotion_codes: true,
-      success_url: "http://localhost:3000/posts",
-      cancel_url: "http://localhost:3000/",
+      success_url:
+        "https://best-article-5ile00zx4-nikisgabriel.vercel.app/posts",
+      cancel_url: "https://best-article-5ile00zx4-nikisgabriel.vercel.app/",
     });
 
     return res.status(200).json({ sessionId: checkoutSession.id });

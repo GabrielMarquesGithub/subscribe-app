@@ -1,6 +1,5 @@
 import { useSession, signIn } from "next-auth/react";
 import { api } from "../../services/api";
-import { stripe } from "../../services/stripe";
 import { getStripeJs } from "../../services/stripe-js";
 
 import styles from "./style.module.scss";

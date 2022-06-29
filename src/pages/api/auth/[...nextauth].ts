@@ -4,7 +4,7 @@ import GithubProvider from "next-auth/providers/github";
 //import do banco de dados
 import { fauna } from "../../../services/fauna";
 //import para criação de query do faunaDB
-import { Casefold, query as q, Select } from "faunadb";
+import { query as q } from "faunadb";
 
 export default NextAuth({
   providers: [
@@ -14,6 +14,7 @@ export default NextAuth({
     }),
   ],
 
+  secret: process.env.NEXTAUTH_SECRET,
   //funções de callback do next auth executam sobre algum evento
   callbacks: {
     async session({ session }) {
