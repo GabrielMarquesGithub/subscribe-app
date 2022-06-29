@@ -42,10 +42,10 @@ export default NextAuth({
           ...session,
           activeSubscription: userActiveSubscription,
         };
-      } catch (err) {
+      } catch {
         return {
           ...session,
-          activeSubscription: `error ${err}`,
+          activeSubscription: null,
         };
       }
     },

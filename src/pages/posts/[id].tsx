@@ -1,6 +1,5 @@
 import { GetServerSideProps } from "next";
 import { getSession } from "next-auth/react";
-import { redirect } from "next/dist/server/api-utils";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 import { apiStrapi } from "../../services/api";
@@ -46,7 +45,7 @@ export const getServerSideProps: GetServerSideProps = async ({
   console.log(session);
 
   //será executado se o user não tiver uma seção ativa
-  if (!session.activeSubscription) {
+  if (!session?.activeSubscription) {
     //no método getServerSideProps para redirecionar um user basta não retornar props e sim um redirect
     return {
       //argumento para redirecionar o cliente
