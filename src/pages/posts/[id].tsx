@@ -45,18 +45,6 @@ export const getServerSideProps: GetServerSideProps = async ({
   console.log(session);
 
   //será executado se o user não tiver uma seção ativa
-  if (!session?.activeSubscription) {
-    //no método getServerSideProps para redirecionar um user basta não retornar props e sim um redirect
-    return {
-      //argumento para redirecionar o cliente
-      redirect: {
-        //destino do redirecionamento
-        destination: "/",
-        //não é algo permanente se o usuário logar conseguira vim a pagina isso também dis ao buscador que a pagina não é só algo indefinido
-        permanent: false,
-      },
-    };
-  }
 
   const response = await apiStrapi.get(`/posts/${params.id}`, {
     headers: {
