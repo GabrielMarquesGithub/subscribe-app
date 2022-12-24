@@ -1,8 +1,9 @@
-# [Subscribe-App](https://best-article.vercel.app/)
+# [Subscribe-App]
 É um aplicativo focado no desenvolvimento de um Front-End para um site de assinatura mensal. O projeto tem como base a biblioteca React em seu framework Next com a implementação do TypeScript para a estilização foi utilizado o SASS
 ### Deploy
-* O app recebeu deploy na Vercel com algumas limitações de funcionalidades: https://best-article.vercel.app/
+* O app recebeu deploy na Vercel com algumas limitações de funcionalidades
 * O back end montado com o template do Strapi recebeu deploy no Heroku
+* Devido a mudanças tanto em relação a Vercel quanto a Plataforma Heroku o Deploy do APP foi pausado indefinidamente
 
 ### Ferramentas 
 Para a criação de funcionalidades do projeto foram utilizadas ferramentas disponibilizadas por terceiros em sua maioria APIs sendo elas
